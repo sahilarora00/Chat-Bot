@@ -1,0 +1,120 @@
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #128C7E;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #0B5E4E;
+}
+
+.chat-messages {
+  padding: 15px;
+  max-height: 400px;
+  overflow-y: scroll;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #DCF8C6;
+  align-self: flex-start;
+}
+
+.other-message {
+  background-color: #EDEDED;
+  align-self: flex-end;
+}
+
+.message-content {
+  word-wrap: break-word;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  /* border-top: 1px solid #0B5E4E; */
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+#send-button {
+  background-color: #128C7E;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+  background-color: #0B5E4E;
+}
+
+/* Scrollbar styles */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #128C7E;
+  border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: #E0E0E0;
+  border-radius: 10px;
+}
